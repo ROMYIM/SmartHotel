@@ -1,0 +1,48 @@
+<!--pages/book/book.wxml-->
+<view class='background'>
+  <view class='book-contanier'>
+    <view class='check-in-item'>
+      <view class='date-item' bindtap='openCalendar' data-target='enter'>
+        <view class='date-label'>入住时间</view>
+        <view class='date-text'>{{enterDate.date}}</view>
+      </view>
+      <!-- <picker mode="date" value="{{enterDate.date}}" start="{{startDate.fullDate}}" end="{{year}}-12-31" bindchange="enterDateChange">
+        <view class='date-item'>
+          <view class='date-label'>入住时间</view>
+          <view class='date-text'>{{enterDate.date}}</view>
+        </view>
+      </picker> -->
+      <view class='duration-text'>{{days}}天</view>
+      <view class='date-item' bindtap='openCalendar' data-target='leave'>
+        <view class='date-label'>退宿时间</view>
+        <view class='date-text'>{{leaveDate.date}}</view>
+      </view>
+      <!-- <picker mode="date" value="{{leaveDate.date}}" start="{{startDate.fullDate}}" end="{{year}}-12-31" bindchange="leaveDateChange">
+        <view class='date-item'>
+          <view class='date-label'>退宿时间</view>
+          <view class='date-text'>{{leaveDate.date}}</view>
+        </view>
+      </picker> -->
+    </view>
+    <view class='check-in-item' style='border: none'>
+      <view class='people-text'>入住人数</view>
+      <view class='people-item'>
+        <button class='people-button left' bindtap='personCountChange' data-control='-1'>-</button>
+        <button class='people-button' style='color:black'>{{personCount}}</button>
+        <button class='people-button right' bindtap='personCountChange' data-control='1'>+</button>
+      </view>
+    </view>
+  </view>
+  <view wx:for="{{list}}" wx:key="TYPEID" class='room-type-container'>
+    <image class='room-picture' src="https://mkcloud.gotechcn.cn/smarthotelImages/{{item.URLS[0].filePath}}" bindtap='showPicture' data-index="{{index}}"></image>
+    <view class='room-introduction-container'>
+      <view class='room-type-title'>{{item.TYPENAME}}</view>
+      <view class='room-introduction-content'>{{item.INFO}}</view>
+      <view class='book-button'>
+        <view class='room-money'>￥{{item.PRICE}}</view>
+        <button class='button-text' bindtap='selectRoom' data-index="{{index}}">预定</button>
+      </view>
+    </view>
+  </view>
+</view>
+<calendar isOpen="{{calendarOpen}}" selected="{{selectedDate}}" bindgetdate="getDate" target="{{dateTarget}}" date="{{date}}"></calendar>

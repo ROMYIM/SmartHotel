@@ -1,0 +1,287 @@
+
+.scenceContainer {
+  display: flex;
+  flex-direction: row;
+  /* float: left; */
+  white-space: nowrap;
+  /* height: 15vh; */
+  width: 92vw;
+  justify-content: space-between;
+}
+
+.scenceContainer::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+} 
+
+
+.carsouel {
+  width: 100vw;
+  height: 30vh;
+  margin: 0%;
+  padding: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.module-background {
+  height: 30vw;
+  width: 33.3%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.module {
+  height: 20vw;
+  width: 15vw;
+}
+
+.module-image {
+  height: 85%;
+  width: 100%;
+}
+
+.module-text {
+  width: 100%;
+  height: 15%;
+  font-size: 3.5vw;
+  text-align: center;
+  color: rgb(148, 146, 146);
+}
+
+.welcome-container {
+  width: 100vw;
+  height: 22vh;
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+}
+
+.welcome-logo {
+  width: 12vw;
+  height: 5vh;
+  z-index: 1;
+}
+
+.room-id {
+	height: 4vw;
+	font-family: MicrosoftYaHei;
+	font-size: 4vw;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+	color: #fefefe;
+  z-index: 1;
+}
+
+.welcome-text {
+  width: 52vw;
+	height: 6vw;
+	font-family: MicrosoftYaHei-Bold;
+	font-size: 6vw;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+	color: #ffe65d;
+  z-index: 1;
+}
+
+.quick-room-panel {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: white;
+  align-items: center;
+}
+
+.room-control-panel {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.room-icon {
+  height: 13vw;
+  width: 13vw;
+}
+
+.room-text {
+  text-align: center;
+	font-family: MicrosoftYaHei;
+	font-size: 2vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rem;
+	color: #03123b;
+	opacity: 0.8;
+  height: 3vh;
+  line-height: 3vh;
+}
+
+.quick-control-panel {
+  margin-top: 1vh;
+  width: 92vw;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.quick-control-panel::after {
+  border-bottom: none;
+}
+
+.door-control-panel {
+  width: 52vw;
+  height: 17vh;
+  /* box-shadow: 0 0 10px darkgray; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4vw;
+  font-size: 1rem;
+  float: left;
+  border-radius: 2vw;
+  background-color: #e0e7f9;
+  justify-content: space-between;
+  padding-top:4vh;
+  padding-bottom: 4vh;
+}
+
+.door-icon {
+  height: 22vw;
+  width: 22vw;
+}
+
+.door-text {
+  font-family: MicrosoftYaHei;
+	font-size: 3vw;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+	color: #497df8;
+}
+
+.lamb-control-container {
+  margin-top: 4vw;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+
+.lamb-control-panel {
+  width: 31vw;
+  height: 12vh;
+  /* box-shadow:  0 0 10px darkgray; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2vw;
+  background-color: #d2f7f3;
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
+
+.lamb-mode-panel {
+  width: 12vw;
+	height: 3vw;
+	font-family: MicrosoftYaHei;
+	font-size: 3vw;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+	color: #18a291;
+}
+
+.room-mode-panel {
+  width: 22vw;
+  height: 9vh;
+  border-radius: 2vw;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e0e7f9;
+  justify-content: space-between;
+  margin-top: 2vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-left: .5vw;
+  margin-right: .5vw;
+}
+
+.room-mode-icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.room-mode-text {
+  font-family: MicrosoftYaHei;
+	font-size: 3vw;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vw;
+  color: #497df8;
+}
+
+.control-panel-text {
+  text-align: center;
+  height: 13vh;
+  line-height: 5vh;
+  font-size: .8rem;
+  margin-left: 2.5vw;
+  padding: 3vw;
+  border-radius: 7rpx;
+  /* box-shadow: 0 0 10px darkgray; */
+  background-color: white;
+  width: 15.875vw;
+}
+
+.lamb-icon {
+  width: 9vh;
+  height: 9vh;
+  /* margin-left: 5vw;
+  margin-right: 5vw; */
+}
+
+.record-button {
+  border-radius: 50%;
+  width: 12vw;
+  height: 12vw;
+  background-color: rgb(0, 140, 255);
+  position: fixed;
+  bottom: 5vw;
+  right: 5vw;
+  /* box-shadow:0 0 10px darkgray; */
+
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: #ffffff;
+  box-sizing: none;
+}
+
+button::after {
+  border: none;
+}
+

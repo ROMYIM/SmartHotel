@@ -1,0 +1,18 @@
+<!--components/dialog.wxml-->
+<!-- <text>components/dialog.wxml</text> -->
+<view class='dialog-container' hidden="{{hidden}}">
+  <view class='dialog-mask' catchtap='_closeEvent'></view>
+  <view class='dialog-window' style="border-radius:{{border_radius}}; width:{{width}}; height:{{hieght}}">
+    <!-- <view class='dialog-title'>{{title}}</view> -->
+    <view class='dialog-content'>
+      <image class='dialog-icon' src='/resources/dialog/pop-up_icon.png'></image>
+      <view class='dialog-text'>{{content}}</view>
+    </view>
+    <view class='btn-text' catchtap='_confirmEvent'>{{confirm}}</view>
+    <!-- <view class='dialog-footer'>
+      <button class='btn-confirm' catchtap='_confirmEvent'>{{confirm}}</button>
+      <button class='btn-cancel' catchtap='_cancelEvent'>{{cancel}}</button>
+    </view> -->
+  </view>
+</view>
+

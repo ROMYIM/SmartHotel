@@ -1,0 +1,34 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/control/control",
+        "pages/book/book",
+        "pages/register/register"
+    ],
+    "window": {
+        "navigationBarTitleText": "康桥田园智慧酒店",
+        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#4076f7",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "resources/tabbar/tab_home_normal.png",
+                "selectedIconPath": "resources/tabbar/tab_home_press.png"
+            },
+            {
+                "pagePath": "pages/control/control",
+                "text": "智控",
+                "iconPath": "resources/tabbar/tab_control_normal.png",
+                "selectedIconPath": "resources/tabbar/tab_control_press.png"
+            }
+        ],
+        "backgroundColor": "#fcfcfc",
+        "borderStyle": "white"
+    }
+}

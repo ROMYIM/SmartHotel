@@ -1,0 +1,19 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.0",
+	"projectname": "SmartHotel",
+	"scripts": {
+		"beforeCompile": "npm run compile",
+		"beforePreview": "npm run compile",
+		"beforeUpload": "npm run compile"
+	},
+	"setting": {
+		"newFeature": true
+	},
+	"appid": "wxca20cf2091c1f4b9",
+	"condition": {}
+}

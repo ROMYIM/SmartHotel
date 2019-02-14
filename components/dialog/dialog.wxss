@@ -1,0 +1,126 @@
+/* components/dialog.wxss */
+
+.dialog-container {
+  width: 100%;
+  height: 100%;
+}
+
+.dialog-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(34, 33, 33, 0.89);
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.dialog-window {
+  width: 55vw;
+  height: 34vh;
+  overflow: hidden;
+  position: fixed;
+  top: 33vh;
+  left: 22vw;
+  z-index: 9999;
+  background: #f9f9f9;
+  /* margin: -180rpx 105rpx; */
+  border-radius: 36rpx;
+}
+
+.dialog-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 29vh;
+  border-bottom: 1px solid #dedede
+}
+
+.dialog-icon {
+  width: 28vw;
+  height: 28vw;
+}
+
+.dialog-text {
+  width: 44vw;
+  height: 9vw;
+	font-family: MicrosoftYaHei;
+	font-size: 4vw;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 4vw;
+	letter-spacing: 0vw;
+	color: #0f0f0f;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.btn-text {
+  height: 5vh;
+  line-height: 5vh;
+  font-family: MicrosoftYaHei;
+	font-size: 2vh;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0vh;
+	color: #2c6bff;
+  text-align: center;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.dialog-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}

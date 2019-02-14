@@ -1,0 +1,89 @@
+<!--components/index/index.wxml-->
+
+<view class="container" hidden="{{hidden}}" style='background-color: #f5f5f5'>
+  <image src='../../resources/index/home_banner_bg.png' class='carsouel' mode='scaleToFill'></image>
+
+  <block wx:if="{{roomList && roomList.length > 0}}">
+  <picker bindchange='changeRoom' range="{{roomList}}" range-key='FAMILYNAME' value='FAMILYID'>
+    <view  class='welcome-container'>
+      <image class='welcome-logo' src='/resources/index/home_icon_face.png'></image>
+      <view class='welcome-text'>欢迎入住智慧酒店</view>
+      <view class='room-id'>{{roomId}}</view>
+    </view>
+  </picker>
+  </block>
+  <block wx:else>
+    <view  class='welcome-container' bindtap='getRoom'>
+      <image class='welcome-logo' src='/resources/index/home_icon_face.png'></image>
+      <view class='welcome-text'>欢迎入住智慧酒店</view>
+      <view class='room-id'>下拉获取房间</view>
+    </view>
+  </block>
+  
+  <view class='quick-room-panel'>
+    <view class='room-control-panel' bindtap='bookRoomClick' data-url='/pages/book/book'>
+      <image class='room-icon' src='../../resources/index/home_icon_reservation.png'></image>
+      <view class='room-text'>订房</view>
+    </view>
+    <view class='room-control-panel' bindtap='checkOutClick'>
+      <image class='room-icon' src='../../resources/index/home_icon_checkout.png'></image>
+      <view class='room-text'>退房</view>
+    </view>
+    <view class='room-control-panel' bindtap='continueClick'>
+      <image class='room-icon' src='../../resources/index/home_icon_continued-housing.png'></image>
+      <view class='room-text'>续房</view>
+    </view>
+    <view class='room-control-panel' bindtap='callButtonClick'>
+      <image class='room-icon' src='../../resources/index/home_icon_call.png'></image>
+      <view class='room-text'>呼叫</view>
+    </view>
+  </view>
+
+  <view class='quick-control-panel'>
+    <view class='door-control-panel' bindtap='openDoorClick'>
+      <image src="../../resources/index/home_icon_opendoor.png" class='door-icon'></image>
+      <view class='door-text' style='box-shadow: none'>开门</view>
+    </view>
+    <view class='lamb-control-container'>
+      <view bindtap="playRecord"class="lamb-control-panel" bindtap='switchLambs' data-command='on'>
+        <view class="lamb-mode-panel">灯光全开</view>
+        <image class="lamb-icon"src="../../resources/index/home_icon_lights_on.png"></image>
+      </view>
+      <view class="lamb-control-panel" bindtap='switchLambs' data-command='off'>
+        <view class="lamb-mode-panel">灯光全关</view>
+        <image class="lamb-icon"src="../../resources/index/home_icon_lights_off.png"></image>
+      </view>
+    </view>
+    <block wx:if="{{scenceList && scenceList.length > 0}}">
+      <scroll-view scroll-x="true" class='scenceContainer'>
+        <block wx:for="{{scenceList}}" wx:key="SCENEID">
+          <view class='room-mode-panel' bindtap='sceneModeClick' data-index="{{index}}" style="background-color: {{item.STYLE.background}}">
+            <image class='room-mode-icon' style="{{item.STYLE.style}}" src="{{item.STYLE.icon}}"></image>
+            <view class='room-mode-text' style="color: {{item.STYLE.textColor}}">{{item.SCENENAME}}</view>
+          </view>
+        </block>
+      </scroll-view>
+    </block>
+    <block wx:else>
+      <view class='room-mode-panel' bindtap='sceneModeClick' data-index='0'>
+        <image class='room-mode-icon' style='width:6vh; height:5vh' src='../../resources/index/home_icon_gohome.png'></image>
+        <view class='room-mode-text'>入住模式</view>
+      </view>
+      <view class='room-mode-panel' style='background-color:#f9f0d3' bindtap='sceneModeClick' data-index='1'>
+        <image class='room-mode-icon' style='width:10vw; height:9vw' src='../../resources/index/home_icon_sleep.png'></image>
+        <view class='room-mode-text' style='color:#c3a415'>睡眠模式</view>
+      </view>
+      <view class='room-mode-panel' style='background-color:#d2f7f3' bindtap='sceneModeClick' data-index='2'>
+        <image class='room-mode-icon' style='width:6vh; heigth:5vh' src='../../resources/index/home_icon_read.png'></image>
+        <view class='room-mode-text' style='color:#23b09e'>阅读模式</view>
+      </view>
+      <view class='room-mode-panel' style='background-color: #fbd9da' bindtap='sceneModeClick' data-index='3'>
+        <image class='room-mode-icon' src='../../resources/index/home_icon_happy.png'></image>
+        <view class='room-mode-text' style='color: #e04950'>娱乐模式</view>
+      </view>
+    </block>
+    
+    
+  </view>
+</view>
+
